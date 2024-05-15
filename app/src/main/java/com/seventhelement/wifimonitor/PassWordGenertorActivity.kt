@@ -43,6 +43,13 @@ class PassWordGenertorActivity : AppCompatActivity() {
         binding = ActivityPassWordGenertorBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setSupportActionBar(binding.toolbar)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
         fetchData()
         lastWifiState = isWifiAvailable()
         val editableName = Editable.Factory.getInstance().newEditable(name)

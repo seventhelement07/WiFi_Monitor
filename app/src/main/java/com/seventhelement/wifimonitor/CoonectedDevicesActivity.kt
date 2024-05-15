@@ -46,7 +46,13 @@ var baseurl="";
         binding = ActivityCoonectedDevicesBinding.inflate(layoutInflater)
         setSupportActionBar(binding.toolbar)
         setContentView(binding.root)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
         scaning()
+
     }
    fun scaning()
    {

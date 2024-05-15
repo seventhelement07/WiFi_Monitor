@@ -34,7 +34,7 @@
             android:background="#03A9F4"
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:title="WiFi Monitor"
+            app:title="Connected Device"
             app:titleTextColor="@android:color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>

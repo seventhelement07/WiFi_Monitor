@@ -27,6 +27,13 @@ import java.util.TimerTask
         super.onCreate(savedInstanceState)
         binding= ActivityWifiSignalLevelBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.toolbar)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
        fetchData()
         lastWifiState = isWifiAvailable()
     }

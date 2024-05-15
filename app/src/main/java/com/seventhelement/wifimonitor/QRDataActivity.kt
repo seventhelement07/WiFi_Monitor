@@ -9,6 +9,13 @@ class QRDataActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityQrdataBinding.inflate(layoutInflater)
+        setSupportActionBar(binding.toolbar)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
         setContentView(binding.root)
         binding.nametext.text= intent.getStringExtra("Name")
         binding.passwordtext.text = intent.getStringExtra("Password")

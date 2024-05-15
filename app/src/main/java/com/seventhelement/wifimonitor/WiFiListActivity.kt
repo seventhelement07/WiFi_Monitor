@@ -29,6 +29,13 @@ class WiFiListActivity : AppCompatActivity(), Adapter2.OnItemSelectedListener {
         super.onCreate(savedInstanceState)
         binding= ActivityWiFiListBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.toolbar)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
         wifiManager = applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
 
 
