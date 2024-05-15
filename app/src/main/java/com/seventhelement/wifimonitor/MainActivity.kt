@@ -44,11 +44,8 @@ class MainActivity : AppCompatActivity(), Adapter.OnItemSelectedListener {
 
         setSupportActionBar(binding.toolbar)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
-        binding.toolbar.setNavigationOnClickListener {
-            onBackPressed()
-        }
+
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         binding.name.text = Settings.Global.getString(contentResolver, "device_name")
         handler = Handler(Looper.getMainLooper())
