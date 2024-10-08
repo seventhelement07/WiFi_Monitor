@@ -1,5 +1,5 @@
 package com.seventhelement.wifimonitor
-import android.content.res.Configuration;
+import android.content.res.Configuration
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity(), Adapter.OnItemSelectedListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbar)
+//        setSupportActionBar(binding.toolbar)
 
 
 
